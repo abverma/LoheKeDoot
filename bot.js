@@ -21,6 +21,7 @@ userStream.on('favorite', function(eventMsg){
   console.log('Favorited!');
 })
 
+// Anytie someone tweets to me
 userStream.on('tweet', function(eventMsg){
   fs.writeFile('output.json', JSON.stringify(eventMsg, null, 2));
   let replyTo = eventMsg.in_reply_to_screen_name;
@@ -34,7 +35,6 @@ userStream.on('tweet', function(eventMsg){
       newTweet = '@' + from + " Can you repeat the question?";
     tweet(newTweet);
   }
-  console.log('Tweeted!');
 })
   
 function followed(eventMsg){
