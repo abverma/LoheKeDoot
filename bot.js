@@ -6,7 +6,7 @@ const Twit = require('twit'),
 
 
 let config = configs.apiKeys;
-let statuses = configs.statuses;
+let followResponses = configs.followResponses;
 
 let T = new Twit(config);
 
@@ -40,9 +40,9 @@ userStream.on('tweet', function(eventMsg){
 function followed(eventMsg){
   let name = eventMsg.source.name;
   let screenName = eventMsg.source.screen_name;
-  let random = Math.floor(Math.random()*10) % statuses.length;
+  let random = Math.floor(Math.random()*10) % followResponses.length;
 
-  tweet('@' + screenName + ' ' + statuses[random]);
+  tweet('@' + screenName + ' ' + followResponses[random]);
 }
 
 function tweet(status){

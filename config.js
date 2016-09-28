@@ -7,7 +7,7 @@ module.exports = {
 	  timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 	},
 
-	statuses: [
+	followResponses: [
 		'Chep!',
 		'Main janta tha tum zaroor aoge.',
 		'Is anjuman me apko aana hai baar baar.',
@@ -16,5 +16,15 @@ module.exports = {
 		'Loha lohe kaat-ta hai.',
 		'Meri dulhan to azaadi hai.',
 		'Saab, aap nahayenge?'
+	],
+
+	statuses: [
+		'Kai baar yun hi dekha hai, lenter pe pani feka hai.',
+		'Trump kya hai? Chidi.',
+		'Wadup bitches!',
+		'Vivir Columbia, harmanos!',
+		'Stranger things me wo tha kya kisi ko pata chala?',
+		
+
 	]
 }
