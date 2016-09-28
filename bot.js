@@ -1,8 +1,8 @@
 console.log('The bot is starting ....');
 
 const Twit = require('twit'),
-		configs = require('./config'),
-    fs = require('fs');
+	configs = require('./config'),
+	fs = require('fs');
 
 
 let config = configs.apiKeys;
@@ -13,14 +13,17 @@ let T = new Twit(config);
 // Setting up a user stream
 let userStream = T.stream('user');
 
+
 // Anytime someone follows me
 userStream.on('follow', followed);
+
 
 userStream.on('favorite', function(eventMsg){
   console.log(eventMsg.source.screen_name);
   console.log('Favorited!');
 })
 
+// Anytie someone tweets to me
 userStream.on('tweet', function(eventMsg){
   fs.writeFile('output.json', JSON.stringify(eventMsg, null, 2));
   let replyTo = eventMsg.in_reply_to_screen_name;
@@ -34,9 +37,9 @@ userStream.on('tweet', function(eventMsg){
       newTweet = '@' + from + " Can you repeat the question?";
     tweet(newTweet);
   }
-  console.log('Tweeted!');
 })
   
+// Callback for follow event
 function followed(eventMsg){
   let name = eventMsg.source.name;
   let screenName = eventMsg.source.screen_name;
@@ -45,6 +48,7 @@ function followed(eventMsg){
   tweet('@' + screenName + ' ' + followResponses[random]);
 }
 
+// Callback for tweet event
 function tweet(status){
     var tweet = {
       status: status
