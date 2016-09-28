@@ -19,12 +19,14 @@ module.exports = {
 	],
 
 	statuses: [
-		'Kai baar yun hi dekha hai, lenter pe pani feka hai.',
-		'Trump kya hai? Chidi.',
-		'Wadup bitches!',
-		'Vivir Columbia, harmanos!',
-		'Stranger things me wo tha kya kisi ko pata chala?',
-		
+		'Kai baar yun hi dekha hai, mandir ke bagal me theka hai.',
+		'Trump kya hai? Hukum.',
+		'Wadup bitches!!!',
+		'Vivir Columbia, harmanos!!!',
+		'Stranger things me wo tha kya? Kisi ko pata chala?',
+		"I'm a neat monster.",
+		'Pen Pinapple Apple Pen',
+		'Elon Musk talks about colony on Mars. Kiss my kundi.'
 
 	]
 }
